@@ -1,0 +1,38 @@
+{
+  "name": "autocomplete",
+  "version": "1.0.0",
+  "description": "A autocomplete component for inputs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack -w --mode development --module-bind js=babel-loader --output-path='./dist'",
+    "build": "webpack --mode production --module-bind js=babel-loader",
+    "start": "json-server -w ./api/words.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luan0ap/autocomplete.git"
+  },
+  "keywords": [
+    "autocomplete",
+    "vanilla",
+    "javascript",
+    "dailycode",
+    "problem",
+    "test",
+    "twitter"
+  ],
+  "author": "luan0ap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luan0ap/autocomplete/issues"
+  },
+  "homepage": "https://github.com/luan0ap/autocomplete#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "json-server": "^0.14.0",
+    "webpack": "^4.16.2",
+    "webpack-cli": "^3.1.0"
+  }
+}
