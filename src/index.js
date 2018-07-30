@@ -1,5 +1,4 @@
-import Form from './components/Form'
-import Input from './components/Input'
+import App from './App.js'
 const $App = document.querySelector('[data-js="App"]')
 
-$App.innerHTML = Form(Input('hello'))
+$App.innerHTML = App

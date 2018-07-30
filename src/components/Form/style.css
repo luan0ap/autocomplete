@@ -1,0 +1,8 @@
+.form-autocomplete {
+  width: 60%;
+  height: 50%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
