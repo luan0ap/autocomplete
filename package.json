@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack -w --mode development --module-bind 'js=babel-loader' --module-bind 'css=style-loader!css-loader' --output-path='./public/dist'",
     "build": "webpack --mode production --module-bind 'js=babel-loader' --module-bind 'css=style-loader!css-loader'",
-    "start": "json-server -w ./api/words.json --port 8080 --static ./public"
+    "start": "json-server -w ./api/words.json --static ./public"
   },
   "repository": {
     "type": "git",

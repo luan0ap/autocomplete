@@ -12,6 +12,7 @@ $App.innerHTML = App(
   )
 )
 
-get('http://localhost:3000/names').then(
-  list => new Autocomplete(document.querySelector('[data-js="input"]', list))
-)
+const createData = get('http://localhost:3000/names')
+  .then(list => new Autocomplete(document.querySelector('[data-js="input"]'), list))
+
+createData.then(obj => obj.create())
