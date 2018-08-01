@@ -2,3 +2,7 @@
   width: 100%;
   height: 2em;
 }
+
+.input::-webkit-calendar-picker-indicator {
+  display: none
+}

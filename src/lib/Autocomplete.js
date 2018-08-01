@@ -4,7 +4,7 @@ export default class Autocomplete {
     this.list = list
   }
 
-  hello () {
-    console.log('Hello World')
+  create () {
+    
   }
 }
