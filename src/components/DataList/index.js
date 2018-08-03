@@ -1,11 +1,8 @@
-import Option from '../Option'
-
-const DataList = (opts, id) => (`
+const DataList = id => (`
 <datalist
-data-list="auto"
-id="${id}"
-class="datalist">
-  ${opts.map(str => Option(str)).join('')}
+  data-list="auto"
+  id="${id}"
+  class="datalist">
 </datalist>`)
 
 export default DataList

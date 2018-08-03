@@ -5,25 +5,55 @@ export default class Autocomplete {
     this.list = list
   }
 
-  keydown (cb) {
+  $(selector) {
+    return document.querySelector(selector)
+  }
+
+  keydown(cb) {
     return this.$input.addEventListener('keydown', cb)
   }
 
-  html ($elm, data) {
+  plusHTML($elm, data) {
+    $elm.innerHTML = data
+  }
+
+  addAfterEndHTML($elm, data) {
     $elm.insertAdjacentHTML('afterend', data)
   }
 
-  handler (DataList) {
+  search(obj, prop = '') {
+    return obj[prop.toUpperCase()] || []
+  }
+
+  $autocomplete () {
+    return this.$('#autocomplete')
+  }
+
+  handler(DataList, Option) {
     const createList = () => {
-      const [first] = this.$input.value
-      const search = this.list[first.toUpperCase()]
-      this.html(this.$input, DataList(search, 'auto'))
+      const getOptions = (value) => {
+        const [first] = value
+        return this.search(this.list, first)
+      }
+
+      const options = array => array.map(n => Option(n)) 
+
+      if (!this.$autocomplete()) {
+        this.addAfterEndHTML(this.$input, DataList('autocomplete'))
+      }
+
+      this.plusHTML(
+        this.$autocomplete(),
+        options(getOptions(this.$input.value)).join('')
+      )
     }
+
+
 
     setTimeout(createList, 300)
   }
 
-  create(DataList = () => { }) {
-    return this.keydown(this.handler.bind(this, DataList))
+  create(DataList = () => { }, Option) {
+    return this.keydown(this.handler.bind(this, DataList, Option))
   }
 }
