@@ -53,7 +53,7 @@ export default class Autocomplete {
     setTimeout(createList, 300)
   }
 
-  create(DataList = () => { }, Option) {
+  create(DataList = () => { }, Option = () => {}) {
     return this.keydown(this.handler.bind(this, DataList, Option))
   }
 }
