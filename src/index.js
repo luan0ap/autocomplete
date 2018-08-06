@@ -10,7 +10,7 @@ const $App = document.querySelector('[data-js="App"]')
 
 $App.innerHTML = App(
   Form(
-    Input('autocomplete')
+    Input()
   )
 )
 

@@ -1,7 +1,7 @@
-const DataList = id => (`
+const DataList = () => (`
 <datalist
-  data-list="auto"
-  id="${id}"
+  data-js="autocomplete"
+  id="autocomplete"
   class="datalist">
 </datalist>`)
 
